@@ -1,0 +1,11 @@
+x= input('Please enter a string ')
+def most_frequent(string):
+    ordereddict = dict()
+    for key in string:
+        if key not in ordereddict:
+            ordereddict[key] = 1
+        else:
+            ordereddict[key] += 1
+    dict1 =sorted(ordereddict.items(), key=lambda x: x[1], reverse=True)
+    return dict1
+print (most_frequent(x))
